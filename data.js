@@ -1,36 +1,20 @@
 // Question Sets for the In-Basket Exercise
 const questionSets = [
   {
-      title: "Office Management Prioritization",
-      background: `<p>You are the newly appointed Administrative Officer at the District Development Office. 
-      This is your first day at work, and the previous Administrative Officer has left several issues unattended. 
-      Your supervisor, the Chief District Officer, is away for a week-long training. 
-      You have 50 minutes to go through the in-basket items and decide which actions to take.</p>
-      
-      <p>You need to prioritize the items based on their urgency and importance, and determine the appropriate 
-      course of action for each item. Remember that you have limited time and resources, so you must make 
-      efficient use of them.</p>`,
-      
-      q1: "A letter from the Ministry of Federal Affairs stating that a monitoring team will visit your office tomorrow for an unannounced inspection of the office's financial records and administrative procedures.",
-      
-      q2: "An email from a local school principal requesting immediate approval for emergency repairs to a school building damaged in yesterday's storm. Children are currently being taught in an unsafe environment.",
-      
-      q3: "A memo from the IT department indicating that the office computer system will undergo scheduled maintenance from 2-4 PM today, making all digital records temporarily inaccessible.",
-      
-      q4: "A notice about an upcoming community development meeting scheduled for next week, requiring your attendance as a representative of the District Development Office.",
-      
-      q5: "A complaint from a citizen about the lack of response to repeated requests for information about a local development project. The citizen threatens to go to the media if not addressed within 24 hours.",
-      
-      q6: "A reminder that quarterly performance reports are due in three days, which require your review and signature before submission to headquarters.",
-      
-      q7: "An invitation to speak at a local college about government career opportunities tomorrow afternoon. Your predecessor had accepted this invitation two weeks ago.",
-      
-      q8: "A request from your assistant for leave tomorrow due to a family emergency. Your assistant normally handles all incoming correspondence and phone calls.",
-      
-      q9: "A notification that a journalist has requested an interview about a controversial land development project in your district. They need an answer by the end of the day.",
-      
-      q10: "A memo from the finance department stating that the monthly budget allocation has been delayed and requesting your authorization to delay some non-essential payments."
-  },
+  "title": "बाग्लुङ जिल्ला अदालतको श्रेस्तेदार",
+  "background": "<p>तपाई जिल्ला अदालत बागलुङको श्रेस्तेदार पदमा कार्यरत हुनुहुन्छ। तपाईको कार्यालयमा दर्ता शाखा, मुद्दा शाखा, तहसिल शाखा, अभिलेख शाखा लगायतका शाखाहरु रहेका छन्। कार्यालयमा ३ जना न्यायाधिस, १ श्रेस्तेदार, ३ इजलास अधिकृत, १ तहसिलदार, ४ नायव सुव्वा, ३ तामेलदारको दरवन्दी रहेको छ। हाल १ जना न्यायाधीस र १ जना इजलास अधिकृतको दरवन्दी रिक्त छ भने तहसिलदार ७ दिनको लागि विदामा जानुभएको छ।</p><p>आज मिति २०७२।१२।२८ गते १० बजेर १५ मिनेटमा कार्यालय पुग्दा तपाइको टेवलमा १० वटा कामहरु राखिएको छ। ती कामहरुलाई प्राथमिकता निर्धारण गरी गर्नुपर्ने कार्य र प्राथमिकता निर्धारणका कारणहरु पहिचान गर्नुहोस्।</p>",
+  
+  "q1": "उच्च अदालतबाट निरीक्षणको लागि भोली २ बजे मुख्य न्यायाधीश आउनुहुने भनी उच्च अदालत, पोखरा बागलुङ इजलासको पत्र।",
+  "q2": "एक जना कार्यालय सहयोगी मादक पदार्थ सेवन गरी कार्यालय आएको भनी प्रशासन शाखाको नायव सुव्वा तपाई समक्ष आउनुभएको।",
+  "q3": "आफूलाई लागुऔषध मुद्दामा लागेको जरिवाना बुझाउन भनी सेवाग्राही निवेदनसहित उपस्थित भएका।",
+  "q4": "बागलुङ नगरपालिकाले दिशामुक्त क्षेत्र घोषणा कार्यक्रममा अतिथिको रूपमा मिति २०७१।१२।२९ गते ११ बजे नगरपालिकाको सभाहलमा उपस्थितको लागि पत्र पठाएको।",
+  "q5": "सम्बन्ध विच्छेदको फिरादपत्रको साथ एक जना महिला उपस्थित हुनुभएको।",
+  "q6": "कानुनको विवादमा परेका बालक लिएर म्याद थपको जिल्ला प्रहरी कार्यालय बागलुङबाट सादा पोशाकसहित प्रहरी आईपुगेको।",
+  "q7": "सर्वोच्च अदालतले २ वर्ष भन्दा बढी अवधि नाघेको मुद्दाहरूको अभिलेख ७ दिनभित्र पठाउन भनी मिति २०७२।१२।१५ गते लेखेको पत्र।",
+  "q8": "सरकारी वकिल कार्यलयबाट सार्वजनिक अपराध मुद्दाको अभियोगपत्रसहित कार्यालय सहयोगी आईपुगेको।",
+  "q9": "तपाईको साथी बुर्तिबाङबाट आईपुगेको र जरुरी काम परेकोले आज ३ बजेभित्र भेट्नुपर्ने भनी फोन गरेको।",
+  "q10": "कार्यालयमा २ बजेर ३० मिनेटमा स्टाफ मिटिङ भनी तपाईको सूचना पाटीमा लेखिएको।"
+},
   
   {
       title: "Healthcare Management Scenario",
