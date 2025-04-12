@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioritization Table</title>
+    <!-- Include external libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Include custom CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Question button floating on the left side -->
+    <div class="floating-q" id="floatingQ">Q</div>
+    
+    <!-- Question panel that toggles when Q is clicked -->
+    <div class="question-panel" id="questionPanel">
+        <div class="question-panel-header">
+            <h2>Question Set</h2>
+            <button class="close-btn" id="closeQuestionPanel">×</button>
+        </div>
+        <!-- Question set selector will be added here by JavaScript -->
+        <div class="question-content" id="questionContent">
+            <!-- Question content will be populated from data.js -->
+        </div>
+    </div>
+    
+    <!-- Fixed header with timer and menu -->
+    <div class="fixed-header">
+        <div class="header-content">
+            <button class="menu-toggle" id="menuToggle">
+                Menu
+                <span id="menuArrow">▼</span>
+            </button>
+            
+            <div class="timer-container">
+                <div class="timer-display" id="timerDisplay">50:00</div>
+                <div class="timer-controls">
+                    <button class="timer-button start" id="startTimer">Start</button>
+                    <button class="timer-button pause" id="pauseTimer">Pause</button>
+                    <button class="timer-button reset" id="resetTimer">Reset</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-dropdown" id="menuDropdown">
+            <button id="saveButton" class="action-button">Save Data</button>
+            <button id="loadButton" class="action-button">Load Saved Data</button>
+            <button id="resetButton" class="action-button">Reset Table</button>
+            <button id="downloadPdfButton" class="action-button">Download as Text</button>
+        </div>
+    </div>
+
+    <div class="title-container">
+        <input type="text" class="title-input" placeholder="Enter title/description here" id="tableTitle" readonly>
+    </div>
+
+    <div class="table-container" id="tableContainer">
+        <table id="priorityTable">
+            <thead>
+                <tr>
+                    <th class="col-item-number">आईटम नम्बर</th>
+                    <th class="col-prioritization" colspan="4">प्राथमिकीकरण</th>
+                    <th class="col-priority-order">प्राथमिकता क्रम</th>
+                    <th class="col-task">गर्नुपर्ने काम</th>
+                </tr>
+            </thead>
+            <tr class="subheader-row">
+                <td></td>
+                <td class="prioritization-subcol">तुरुन्त</td>
+                <td class="prioritization-subcol">अ.जरुरी</td>
+                <td class="prioritization-subcol">जरुरी</td>
+                <td class="prioritization-subcol">सामान्य</td>
+                <td></td>
+                <td>
+                    <textarea rows="3" style="width: 100%;" placeholder="गर्नुपर्ने काम"></textarea>
+                </td>
+            </tr>
+            <!-- Data rows will be added here by JavaScript -->
+        </table>
+    </div>
+    
+    <div class="footer">
+       <u>Developed by:</u> <br> Shiva Prasad Acharya <br> Supreme Court, Nepal(2080)
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding-top: 70px; /* Space for fixed header */
+}
+
+/* Floating Q button */
+.floating-q {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.floating-q:hover {
+  background-color: #2980b9;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Question panel */
+.question-panel {
+  position: fixed;
+  left: -400px; /* Start off-screen */
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.question-panel.open {
+  left: 0;
+}
+
+.question-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+}
+
+.question-panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+
+.question-content {
+  padding: 15px;
+}
+
+.question-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.question-content p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Fixed header with timer and menu */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 90;
+  padding: 10px 20px;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Timer styling */
+.timer-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.timer-display {
+  font-size: 1.3em;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.timer-button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+.timer-button.start {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.timer-button.pause {
+  background-color: #FFC107;
+}
+
+.timer-button.reset {
+  background-color: #F44336;
+  color: white;
+}
+
+/* Menu styling */
+.menu-toggle {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  display: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.menu-dropdown.show {
+  display: block;
+}
+
+.action-button {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9em;
+}
+
+.action-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Title container */
+.title-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
+.title-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Table styling */
+.table-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Fixed header rows */
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.subheader-row {
+  position: sticky;
+  top: 41px; /* Adjust based on the height of the first row */
+  z-index: 1;
+  background-color: #fff;
+}
+
+.col-item-number {
+  width: 10%;
+}
+
+.col-prioritization {
+  width: 20%;
+}
+
+.prioritization-subcol {
+  text-align: center;
+  padding: 5px;
+  position: relative;
+}
+
+/* Add horizontal line under prioritization headers */
+.prioritization-subcol:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+
+.col-priority-order {
+  width: 10%;
+}
+
+.col-task {
+  width: 60%;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-main {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.task-reason {
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.task-reason-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 90%;
+  padding: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
